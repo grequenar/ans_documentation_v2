@@ -9,7 +9,7 @@ ansible_objects:
     repository: https://github.com/tvallas/ansible-role-selinux
     short_description: Ansible role to manage SELinux policy modules
     tags: RHEL
-    date: 2020-12-22
+    date: "2020-12-22"
   - name: ans_ibe_linux_r_ntp
     title: NTP role
     #country: iberdrola
@@ -19,7 +19,7 @@ ansible_objects:
     repository: http://github.com/tvallas/ansible-role-selinux
     short_description: Ansible role to manage SELinux policy modules
     tags: RHEL
-    date: 2020-12-11
+    date: "2020-12-11"
   - name: ans_ibe_linux_r_mariabd
     title: mariadb role
     #country: iberdrola
@@ -29,4 +29,4 @@ ansible_objects:
     repository: https://github.com/tvallas/ansible-role-selinux
     short_description: Ans
     tags: RHEL??,
-    date: 2018-05-02
+    date: "2018-05-02"
