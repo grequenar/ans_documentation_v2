@@ -11,12 +11,12 @@ ansible_objects:
     tags: RHEL
     date: "2020-12-22"
   - name: ans_ibe_linux_r_ntp
-    title: NTP role
+    title: NTP role linux
     #country: iberdrola
     #group: linux
     #type: role
     author: Gloria
-    repository: http://github.com/tvallas/ansible-role-selinux
+    repository: https://github.com/tvallas/ansible-role-selinux
     short_description: Ansible role to manage SELinux policy modules
     tags: RHEL
     date: "2020-12-11"
