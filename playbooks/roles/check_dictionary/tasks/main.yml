@@ -1,0 +1,2 @@
+- name: comprobar valores diccionario
+  include_tasks: validate_parameters_of_dictionary.yml 

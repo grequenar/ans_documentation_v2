@@ -1,0 +1,28 @@
+--- 
+layout: post 
+title: {{item.title}} 
+{% set listAtributesName = item.name.split('-') %} 
+permalink: /{{listAtributesName[0]}}/{{listAtributesName[1]}}/{{listAtributesName[2]}}/{{listAtributesName[3]}}/{{item.name}}.html  
+--- 
+
+## Author
+
+{{ item.author }}
+
+## Repo URL 
+ 
+ [{{item.name}}][{{item.name}}] 
+ 
+[{{item.name}}]: {{item.repository}} 
+ 
+## Description 
+ 
+{{item.short_descripcion}} 
+ 
+## Date 
+ 
+{{ item.date | date: '%B %d, %Y' }}
+
+## Tags
+
+{{ item.tags }}

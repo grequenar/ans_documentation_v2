@@ -1,0 +1,15 @@
+---
+- name: site generator
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  
+  tasks:
+  - include_vars:
+      file: /home/iberdrola_installer/poc_files_v2/ans_documentation_v2/_data/ans_doc.yml
+
+  - name: create the posts
+    template:
+      src: /home/iberdrola_installer/poc_files_v2/ans_documentation_v2/templates/YYYY-MM-DD-title.md
+      dest: /home/iberdrola_installer/poc_files_v2/ans_documentation_v2/_posts
+    with_dict: "{{ ansible_objects }}"   

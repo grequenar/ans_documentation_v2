@@ -1,0 +1,7 @@
+- name: post creation
+  template:
+    src: posts.j2
+    dest: "/home/iberdrola_installer/poc_files_v2/ans_documentation_v2/_posts/{{ item.date }}-{{ item.name }}.md"
+    owner: iberdrola_installer
+    group: iberdrola_installer
+

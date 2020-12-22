@@ -1,0 +1,61 @@
+---
+#name - nomenclatura
+#country
+#group
+#type - rol, playbook collection inventory
+#author - name + lastname
+#repository - start en https://
+#description - no null
+#tags - 
+#date - mascara fecha
+
+- name: debug
+  debug:
+    msg: "{{ item }}"
+
+- name: inicialización variable resultado
+  set_fact:
+    resultado: "" 
+
+- name: check variable name
+  set_fact:
+    resultado: "{{ resultado }} + ['nomenclatura incorrecta valor {{ item.name }}. El formato debería ser ans-country-group-type-name\n']"
+  when: item|selectattr("name", "defined")|list|length <1 or not item.name or item.name is not match ('^(ans_(ibe|spw|agr|neo|mex)_(linux|win|email|sql|ad|ora|storage|j2ee|mon|dts|ocp)_(p|r|i|c)_([\w_]+))$')  
+
+- name: check variable title
+  set_fact:
+    resultado: "{{ resultado }} + ['titulo incorrecto {{ item.title }}. Deberia contener como máximo 50 caracteres y como mínimo 10 \n']"
+  when: not item.title or item.title is not match ('^.{10,50}$')
+
+- name: check author
+  set_fact:
+    resultado: "{{ resultado }} + ['formato de fecha incorrecto valor {{ item.author }}. El formato debería ser nombre y apellidos o correo electrónico\n']"
+  when: not item.author or item.author is not match ('^[\w_.@\- ]+$') 
+
+- name: check repository
+  set_fact:
+    resultado: "{{ resultado }} + ['formato de url incorrecto valor {{ item.repository }}. Debería comenzar por https:// \n']"
+  when: not item.repository or item.repository is not match ('^https:\/\/([\w]+[.][\w]+[\w_\-\/]+)$')
+
+- name: check description
+  set_fact:
+    resultado: "{{ resultado }} + ['descripción incorrecta {{ item.short_description }}. Debería contener como máximo 200 caracteres y como mínimo 25 \n']"
+  when: not item.short_description or item.short_description is not match ('^.{25,500}$')
+
+- name: check tags
+  set_fact:
+    resultado: "{{ resultado }} + ['formato de fecha incorrecto valor {{ item.tags }}. Las tags debería estar separadas por ',' \n']"
+  when: not item.tags or item.tags is not match ('^([\w]+,{0,1}[\w]+)+$')
+
+- name: check date
+  set_fact: 
+    resultado: "{{ resultado }} + ['formato de fecha incorrecto valor {{ item.date }}. El formato debería ser DD-MM-YYYY\n']"
+  when: ( item|selectattr("date", "defined")|list|length <1 or not item.date or item.date is not match ('^([0-9][0-9][0-9][0-9]\-[0-9][0-9]\-[0-9][0-9])$') )
+
+  #- name: print name result
+  #  assert:
+  #    that: not resultado
+  #    success_msg: "El resultado de las validaciones es correcto"
+  #    fail_msg: "El resultado de la ejecución es incorrecto:\n {{ resultado }}"
+
+ 

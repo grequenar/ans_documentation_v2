@@ -1,0 +1,37 @@
+---
+- name: check
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  
+  pre_tasks:
+  - name: clone del diccionario
+    git: 
+      repo: "https://grequenar:{{ git_pass }}@github.com/grequenar/ans_documentation_v2.git"
+      dest: /var/tmp/ans_documentation_v2
+
+  tasks:
+  - name: comprobar sintaxis diccionario
+    shell: ansible-lint /var/tmp/ans_documentation_v2/_data/ans_doc.yml
+   
+  - include_vars:
+      file: /var/tmp/ans_documentation_v2/_data/ans_doc.yml
+ 
+  - debug:
+      msg: "{{ ansible_objects[0] }}"
+ 
+  - debug:
+      msg: "{{ item }}"
+    with_items: "{{ ansible_objects }}" 
+
+  - name: comprobar valores diccionario
+    include_role:
+      name: check_dictionary
+    with_items: "{{ ansible_objects }}"
+
+  - name: print name result
+    assert:
+      that: not resultado
+      success_msg: "El resultado de las validaciones es correcto"
+      fail_msg: "El resultado de la ejecución es incorrecto:\n {{ resultado }}"
+
