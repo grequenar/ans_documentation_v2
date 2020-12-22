@@ -1,0 +1,28 @@
+---
+ansible_objects:
+  - name: ans-ibe-linux-r-SELinux
+    country: iberdrola
+    group: linux
+    type: role
+    author: Gloria
+    repository: https://github.com/tvallas/ansible-role-selinux
+    short_description: Ansible role to manage SELinux policy modules
+    tags: RHEL
+    date: 20-12-2020
+    group: linux
+  - name: ans-ibe-linux-r-ntp
+    type: role
+    author: Gloria
+    repository: https://github.com/tvallas/ansible-role-selinux
+    short_description: Ansible role to manage SELinux policy modules
+    tags: RHEL
+    date: 20-12-2020
+    group: linux
+  - name: ans-ibe-linux-r-mariabd
+    type: role
+    author: Gloria
+    repository: https://github.com/tvallas/ansible-role-selinux
+    short_description: Ansible role to manage SELinux policy modules
+    tags: RHEL
+    date: 20-12-2020
+    group: linux
