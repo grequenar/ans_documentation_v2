@@ -27,6 +27,6 @@ ansible_objects:
     #type: role
     author: Gloria
     repository: https://github.com/tvallas/ansible-role-selinux
-    short_description: Ansible role for mariadb
+    short_description: Ansible role for mariadb iberdrola for linux machines
     tags: RHEL
     date: "2018-05-02"
