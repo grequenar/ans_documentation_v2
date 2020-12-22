@@ -10,8 +10,9 @@ permalink: /index.html
 {% for object in site.data.ans_doc.ansible_objects %}
 <li>
 <h3>
-<a class="group-link" href="{{ site.url }}{{site.baseurl}}{{ object.name }}">
-	{{ object.name }} <br>
+{% assign listAtributesName = object.name | split:"_"  %}
+<a class="group-link" href="{{ site.url }}{{site.baseurl}}/{{listAtributesName[0]}}/{{listAtributesName[1]}}/{{listAtributesName[2]}}/{{listAtributesName[3]}}/{{object.name}}.html">
+	{{ object.title }} <br>
 </a>
 </h3>
 </li>

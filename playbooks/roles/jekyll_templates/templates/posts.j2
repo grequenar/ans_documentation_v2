@@ -1,8 +1,8 @@
 --- 
 layout: post 
 title: {{item.title}} 
-{% set listAtributesName = item.name.split('-') %} 
-permalink: /{{listAtributesName[0]}}/{{listAtributesName[1]}}/{{listAtributesName[2]}}/{{listAtributesName[3]}}/{{item.name}}.html  
+{% set listAtributesName = item.name.split('_') %}
+permalink: /{{listAtributesName[0]}}/{{listAtributesName[1]}}/{{listAtributesName[2]}}/{{listAtributesName[3]}}/{{item.name}}.html 
 --- 
 
 ## Author
@@ -17,11 +17,11 @@ permalink: /{{listAtributesName[0]}}/{{listAtributesName[1]}}/{{listAtributesNam
  
 ## Description 
  
-{{item.short_descripcion}} 
+{{item.short_description}} 
  
 ## Date 
  
-{{ item.date | date: '%B %d, %Y' }}
+{{ item.date }}
 
 ## Tags
 

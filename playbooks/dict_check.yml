@@ -1,12 +1,13 @@
+# Example usage: ansible-playbook -i ansiblecontroller playbooks/dict_check.yml -vvv --extra-vars "git_pass=*************"
+# This playbook checks the syntax of the dictionary
 ---
 - name: check
   hosts: localhost
   connection: local
   gather_facts: no
-  
   pre_tasks:
   - name: clone del diccionario
-    git: 
+    git:
       repo: "https://grequenar:{{ git_pass }}@github.com/grequenar/ans_documentation_v2.git"
       dest: /var/tmp/ans_documentation_v2
 

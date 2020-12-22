@@ -5,7 +5,7 @@
   gather_facts: no
   
   tasks:
-   - include_vars:
+  - include_vars:
       file: /var/tmp/ans_documentation_v2/_data/ans_doc.yml
 
   - name: crear posts en base a entradas de diccionario
