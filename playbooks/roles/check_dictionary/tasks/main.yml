@@ -1,2 +1,14 @@
+- name: inicialización variable resultado
+  set_fact:
+    resultado: []
+    name: name
+    title: title
+    author: author
+    repository: repository
+    short_description: short_description
+    date: date
+    tags: tags
+
 - name: comprobar valores diccionario
-  include_tasks: validate_parameters_of_dictionary.yml 
+  include_tasks: validate_parameters_of_dictionary.yml
+  loop: "{{ ansible_objects }}" 

@@ -1,6 +1,6 @@
 ---
 ansible_objects:
-  - name: ans_hola_linux_r_SELinux
+  - name: ans_ibe_linux_r_SELinux
     title: SELinux role
     #country: iberdrola
     #group: linux
@@ -15,7 +15,7 @@ ansible_objects:
     #country: iberdrola
     #group: linux
     #type: role
-    author: Gloria????
+    author: Gloria
     repository: http://github.com/tvallas/ansible-role-selinux
     short_description: Ansible role to manage SELinux policy modules
     tags: RHEL
@@ -27,6 +27,6 @@ ansible_objects:
     #type: role
     author: Gloria
     repository: https://github.com/tvallas/ansible-role-selinux
-    short_description: Ans
-    tags: RHEL??,
+    short_description: Ansible role for mariadb
+    tags: RHEL
     date: "2018-05-02"

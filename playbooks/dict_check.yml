@@ -17,17 +17,9 @@
   - include_vars:
       file: /var/tmp/ans_documentation_v2/_data/ans_doc.yml
  
-  - debug:
-      msg: "{{ ansible_objects[0] }}"
- 
-  - debug:
-      msg: "{{ item }}"
-    with_items: "{{ ansible_objects }}" 
-
   - name: comprobar valores diccionario
     include_role:
       name: check_dictionary
-    with_items: "{{ ansible_objects }}"
 
   - name: print name result
     assert:

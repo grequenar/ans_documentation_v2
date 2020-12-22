@@ -5,14 +5,11 @@
   gather_facts: no
   
   tasks:
-  - include_vars:
-      file: /home/iberdrola_installer/poc_files_v2/ans_documentation_v2/_data/ans_doc.yml
-
    - include_vars:
       file: /var/tmp/ans_documentation_v2/_data/ans_doc.yml
 
-  - name: comprobar valores diccionario
+  - name: crear posts en base a entradas de diccionario
     include_role:
       name: jekyll_templates
-    with_items: "{{ ansible_objects }}"
+    loop: "{{ ansible_objects }}"
  
