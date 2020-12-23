@@ -7,7 +7,7 @@ ansible_objects:
     short_description: Ansible role to manage SELinux policy modules
     tags: RHEL
     date: "2020-12-22"
-  - name: ans_ibe_windows_r_ntp
+  - name: ans_ibe_win_r_ntp
     title: NTP role windows
     author: Gloria
     repository: https://github.com/tvallas/ansible-role-selinux
@@ -28,7 +28,7 @@ ansible_objects:
     short_description: Ansible role for mariadb iberdrola for linux machines
     tags: RHEL
     date: "2018-05-02"
-  - name: ans_mex_windows_r_mariabd
+  - name: ans_mex_win_r_mariabd
     title: mariadb windows role
     author: Gloria
     repository: https://github.com/tvallas/ansible-role-selinux
