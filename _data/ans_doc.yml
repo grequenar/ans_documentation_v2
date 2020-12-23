@@ -2,31 +2,58 @@
 ansible_objects:
   - name: ans_ibe_linux_r_SELinux
     title: SELinux role
-    #country: iberdrola
-    #group: linux
-    #type: role
     author: Gloria
     repository: https://github.com/tvallas/ansible-role-selinux
     short_description: Ansible role to manage SELinux policy modules
     tags: RHEL
     date: "2020-12-22"
-  - name: ans_ibe_linux_r_ntp
-    title: NTP role linux
-    #country: iberdrola
-    #group: linux
-    #type: role
+  - name: ans_ibe_windows_r_ntp
+    title: NTP role windows
     author: Gloria
     repository: https://github.com/tvallas/ansible-role-selinux
     short_description: Ansible role to manage SELinux policy modules
     tags: RHEL
     date: "2020-12-11"
-  - name: ans_ibe_linux_r_mariabd
+  - name: ans_ibe_sql_p_mariabd
     title: mariadb role
-    #country: iberdrola
-    #group: linux
-    #type: role
     author: Gloria
     repository: https://github.com/tvallas/ansible-role-selinux
     short_description: Ansible role for mariadb iberdrola for linux machines
     tags: RHEL
     date: "2018-05-02"
+  - name: ans_mex_linux_c_mariabd
+    title: mariadb role brasil
+    author: Gloria
+    repository: https://github.com/tvallas/ansible-role-selinux
+    short_description: Ansible role for mariadb iberdrola for linux machines
+    tags: RHEL
+    date: "2018-05-02"
+  - name: ans_mex_windows_r_mariabd
+    title: mariadb windows role
+    author: Gloria
+    repository: https://github.com/tvallas/ansible-role-selinux
+    short_description: Ansible role for mariadb iberdrola for linux machines
+    tags: RHEL
+    date: "2018-05-02"
+  - name: ans_agr_linux_p_SELinux
+    title: selinux role avangrid
+    author: Gloria
+    repository: https://github.com/tvallas/ansible-role-selinux
+    short_description: Ansible role for mariadb iberdrola for linux machines
+    tags: RHEL
+    date: "2018-05-02"
+  - name: ans_ibe_ora_i_mariadb
+    title: mariadb role inventory
+    author: Gloria
+    repository: https://github.com/tvallas/ansible-role-selinux
+    short_description: Ansible role for mariadb iberdrola for linux machines
+    tags: RHEL
+    date: "2018-05-02"
+  - name: ans_ibe_linux_p_mariabd
+    title: mariadb role playbook
+    author: Gloria
+    repository: https://github.com/tvallas/ansible-role-selinux
+    short_description: Ansible role for mariadb iberdrola for linux machines
+    tags: RHEL
+    date: "2018-05-02"
+
