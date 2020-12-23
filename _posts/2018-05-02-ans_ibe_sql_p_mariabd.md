@@ -1,7 +1,7 @@
 --- 
 layout: post 
 title: mariadb role 
-permalink: /ans/ibe/linux/r/ans_ibe_linux_r_mariabd.html 
+permalink: /ans/ibe/sql/p/ans_ibe_sql_p_mariabd.html 
 --- 
 
 ## Author
@@ -10,9 +10,9 @@ Gloria
 
 ## Repo URL 
  
- [ans_ibe_linux_r_mariabd][ans_ibe_linux_r_mariabd] 
+ [ans_ibe_sql_p_mariabd][ans_ibe_sql_p_mariabd] 
  
-[ans_ibe_linux_r_mariabd]: https://github.com/tvallas/ansible-role-selinux 
+[ans_ibe_sql_p_mariabd]: https://github.com/tvallas/ansible-role-selinux 
  
 ## Description 
  
